@@ -8,9 +8,15 @@ public class Main {
         for(int i = 0; i< n; i++){
 //            Multithreading object = new Multithreading();
 //            object.start();
-            Multithreadiing_Runnable object= new Multithreadiing_Runnable();
-            Thread thread = new Thread(object);
-            thread.start();
+            Multithreadiing_Runnable object1= new Multithreadiing_Runnable();
+            Multithreadiing_Runnable object2= new Multithreadiing_Runnable();
+
+            Thread thread1 = new Thread(object1);
+            Thread thread2 = new Thread(object2);
+
+            thread1.start();
+            System.out.println("seperate thread");
+            thread2.start();
         }
     }
 }
